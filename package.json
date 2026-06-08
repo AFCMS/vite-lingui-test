@@ -1,0 +1,38 @@
+{
+  "name": "vite-lingui-test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "po:extract": "lingui extract",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@lingui/cli": "^6.2.0",
+    "@lingui/core": "^6.2.0",
+    "@lingui/macro": "^5.9.5",
+    "@lingui/react": "^6.2.0",
+    "jotai": "^2.20.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@lingui/vite-plugin": "^6.2.0",
+    "@rolldown/plugin-babel": "^0.2.3",
+    "@types/node": "^24.12.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "eslint": "^10.4.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.60.1",
+    "vite": "^8.0.16"
+  }
+}
