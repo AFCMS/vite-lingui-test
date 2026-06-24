@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import react, { reactCompilerPreset } from "@vitejs/plugin-react";
 import babel from "@rolldown/plugin-babel";
 import { lingui, linguiTransformerBabelPreset } from "@lingui/vite-plugin";
 
@@ -8,6 +8,6 @@ export default defineConfig({
   plugins: [
     react(),
     lingui(),
-    babel({ presets: [linguiTransformerBabelPreset()] }),
+    babel({ presets: [linguiTransformerBabelPreset(), reactCompilerPreset()] }),
   ],
 });
