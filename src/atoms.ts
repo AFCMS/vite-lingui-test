@@ -5,7 +5,12 @@ import { dynamicActivate } from "./locale";
 
 export type Languages = "en" | "fr";
 
-export const languageAtom = atomWithStorage<Languages>("language:v1", "en");
+export const languageAtom = atomWithStorage<Languages>(
+  "language:v1",
+  "en",
+  undefined,
+  { getOnInit: true },
+);
 
 export const localeLoadingAtom = atom(false);
 export const localeReadyAtom = atom(false);

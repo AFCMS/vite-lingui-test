@@ -1,5 +1,6 @@
 import { useAtomValue, useSetAtom } from "jotai";
-import { t } from "@lingui/core/macro";
+import { t as t2 } from "@lingui/core/macro";
+import { Trans, useLingui } from "@lingui/react/macro";
 import { useState } from "react";
 
 import "./App.css";
@@ -12,6 +13,7 @@ import {
 } from "./atoms";
 
 function App() {
+  const { t } = useLingui();
   const [tt, setTT] = useState(0);
   const language = useAtomValue(languageAtom);
   const isLocaleLoading = useAtomValue(localeLoadingAtom);
@@ -39,6 +41,10 @@ function App() {
       <div>TT: {tt}</div>
 
       <h2>{t`Hello, World!`}</h2>
+      <h2>{t2`Hello, World!`}</h2>
+      <h2>
+        <Trans>Hello, World!</Trans>
+      </h2>
     </>
   );
 }
