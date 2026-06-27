@@ -1,6 +1,6 @@
 import { useAtomValue, useSetAtom } from "jotai";
 import { t as t2 } from "@lingui/core/macro";
-import { Trans, useLingui } from "@lingui/react/macro";
+import { Trans, useLingui, Plural } from "@lingui/react/macro";
 import { useState } from "react";
 
 import "./App.css";
@@ -44,6 +44,9 @@ function App() {
       <h2>{t2`Hello, World!`}</h2>
       <h2>
         <Trans>Hello, World!</Trans>
+      </h2>
+      <h2>
+        <Plural value={tt} one="One item" other="Many items" />
       </h2>
     </>
   );
