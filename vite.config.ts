@@ -8,6 +8,6 @@ export default defineConfig({
   plugins: [
     react(),
     lingui(),
-    babel({ presets: [linguiTransformerBabelPreset(), reactCompilerPreset()] }),
+    babel({ presets: [reactCompilerPreset(), linguiTransformerBabelPreset()] }),
   ],
 });

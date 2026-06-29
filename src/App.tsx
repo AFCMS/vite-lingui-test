@@ -14,7 +14,7 @@ import {
 
 function App() {
   const { t } = useLingui();
-  const [tt, setTT] = useState(0);
+  const [tt, setTT] = useState(1);
   const language = useAtomValue(languageAtom);
   const isLocaleLoading = useAtomValue(localeLoadingAtom);
   const changeLanguage = useSetAtom(changeLanguageAtom);
@@ -38,6 +38,7 @@ function App() {
 
       <div>Language: {language}</div>
       <button onClick={() => setTT((t) => t + 1)}>+1</button>
+      <button onClick={() => setTT((t) => t - 1)}>-1</button>
       <div>TT: {tt}</div>
 
       <h2>{t`Hello, World!`}</h2>

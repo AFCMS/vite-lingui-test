@@ -13,7 +13,6 @@
   "dependencies": {
     "@lingui/cli": "^6.4.0",
     "@lingui/core": "^6.4.0",
-    "@lingui/macro": "^5.9.5",
     "@lingui/react": "^6.4.0",
     "jotai": "^2.20.1",
     "react": "^19.2.7",
