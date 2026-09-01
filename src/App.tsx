@@ -28,8 +28,8 @@ function App() {
 
       <div>Language: {language}</div>
       <div className="button-group">
-        <button onClick={() => setTT((t) => t + 1)}>+1</button>
         <button onClick={() => setTT((t) => t - 1)}>-1</button>
+        <button onClick={() => setTT((t) => t + 1)}>+1</button>
       </div>
       <div>TT: {tt}</div>
 
