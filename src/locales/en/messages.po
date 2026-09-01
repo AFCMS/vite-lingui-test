@@ -13,12 +13,12 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/App.tsx:49
+#: src/App.tsx:41
 msgid "{tt, plural, one {One item} other {Many items}}"
 msgstr "{tt, plural, one {One item} other {Many items}}"
 
-#: src/App.tsx:43
-#: src/App.tsx:44
-#: src/App.tsx:46
+#: src/App.tsx:35
+#: src/App.tsx:36
+#: src/App.tsx:38
 msgid "Hello, World!"
 msgstr "Hello, World!"
