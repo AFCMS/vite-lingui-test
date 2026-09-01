@@ -5,12 +5,9 @@ import { dynamicActivate } from "./locale";
 
 export type Languages = "en" | "fr";
 
-export const languageAtom = atomWithStorage<Languages>(
-  "language:v1",
-  "en",
-  undefined,
-  { getOnInit: true },
-);
+export const languageAtom = atomWithStorage<Languages>("language:v1", "en", undefined, {
+  getOnInit: true,
+});
 
 export const localeLoadingAtom = atom(false);
 export const localeReadyAtom = atom(false);
@@ -28,23 +25,20 @@ export const bootstrapLocaleAtom = atom(null, async (get, set) => {
   }
 });
 
-export const changeLanguageAtom = atom(
-  null,
-  async (get, set, nextLanguage: Languages) => {
-    if (nextLanguage === get(languageAtom)) {
-      return;
+export const changeLanguageAtom = atom(null, async (get, set, nextLanguage: Languages) => {
+  if (nextLanguage === get(languageAtom)) {
+    return;
+  }
+
+  set(localeLoadingAtom, true);
+
+  try {
+    const activated = await dynamicActivate(nextLanguage);
+
+    if (activated) {
+      set(languageAtom, nextLanguage);
     }
-
-    set(localeLoadingAtom, true);
-
-    try {
-      const activated = await dynamicActivate(nextLanguage);
-
-      if (activated) {
-        set(languageAtom, nextLanguage);
-      }
-    } finally {
-      set(localeLoadingAtom, false);
-    }
-  },
-);
+  } finally {
+    set(localeLoadingAtom, false);
+  }
+});

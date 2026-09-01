@@ -1,16 +1,11 @@
-import { useAtomValue, useSetAtom } from "jotai";
 import { t as t2 } from "@lingui/core/macro";
 import { Trans, useLingui, Plural } from "@lingui/react/macro";
+import { useAtomValue, useSetAtom } from "jotai";
 import { useState } from "react";
 
 import "./App.css";
 
-import {
-  changeLanguageAtom,
-  languageAtom,
-  localeLoadingAtom,
-  type Languages,
-} from "./atoms";
+import { changeLanguageAtom, languageAtom, localeLoadingAtom, type Languages } from "./atoms";
 
 function App() {
   const { t } = useLingui();
@@ -27,11 +22,7 @@ function App() {
 
   return (
     <>
-      <select
-        value={language}
-        onChange={handleLanguageChange}
-        disabled={isLocaleLoading}
-      >
+      <select value={language} onChange={handleLanguageChange} disabled={isLocaleLoading}>
         <option value="en">English</option>
         <option value="fr">Français</option>
       </select>
