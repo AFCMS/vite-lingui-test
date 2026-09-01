@@ -15,7 +15,7 @@ msgstr ""
 
 #: src/App.tsx:41
 msgid "{tt, plural, one {One item} other {Many items}}"
-msgstr ""
+msgstr "{tt, plural, one {Un article} other {Beaucoup d'articles}}"
 
 #: src/App.tsx:35
 #: src/App.tsx:36

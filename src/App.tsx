@@ -1,4 +1,3 @@
-import { t as t2 } from "@lingui/core/macro";
 import { Trans, useLingui, Plural } from "@lingui/react/macro";
 import { useAtomValue, useSetAtom } from "jotai";
 import { useState } from "react";
@@ -28,12 +27,13 @@ function App() {
       </select>
 
       <div>Language: {language}</div>
-      <button onClick={() => setTT((t) => t + 1)}>+1</button>
-      <button onClick={() => setTT((t) => t - 1)}>-1</button>
+      <div className="button-group">
+        <button onClick={() => setTT((t) => t + 1)}>+1</button>
+        <button onClick={() => setTT((t) => t - 1)}>-1</button>
+      </div>
       <div>TT: {tt}</div>
 
       <h2>{t`Hello, World!`}</h2>
-      <h2>{t2`Hello, World!`}</h2>
       <h2>
         <Trans>Hello, World!</Trans>
       </h2>
